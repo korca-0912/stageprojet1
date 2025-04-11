@@ -1,9 +1,9 @@
-// Button.jsx
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-// Version avec export explicite
+
 export const Button = ({
   children,
   variant = 'primary',
@@ -34,5 +34,5 @@ export const Button = ({
 
 Button.propTypes = { /* ... (gardez la même configuration) ... */ };
 
-// Export par défaut
+
 export default Button;
