@@ -1,0 +1,108 @@
+.data-table-container {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  
+  .table-scroll {
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  
+  .data-table th {
+    background-color: #4a6bdf;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+  }
+  
+  .data-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+  
+  .data-table tbody tr.clickable:hover {
+    cursor: pointer;
+    background-color: #ebf4ff;
+  }
+  
+  .data-table tbody tr.selected {
+    background-color: #ebf4ff;
+  }
+  
+  .sortable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sortable:hover {
+    background-color: #3b5bdb;
+  }
+  
+  .sort-icon {
+    margin-left: 6px;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .pagination-controls button {
+    padding: 6px 12px;
+    background-color: #4a6bdf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pagination-controls button:hover:not(:disabled) {
+    background-color: #3b5bdb;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .select-column {
+    width: 40px;
+  }
+  
+  .select-cell {
+    text-align: center;
+  }
+  
+  .select-cell input {
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .data-table th,
+    .data-table td {
+      padding: 8px 12px;
+    }
+  }
+
+/*# sourceMappingURL=components-DataTable-DataTable-stories.f0a4a5df.chunk.css.map*/

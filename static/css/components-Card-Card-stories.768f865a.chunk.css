@@ -1,0 +1,141 @@
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #4a6bdf;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+  }
+  
+  .card-image-container {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    margin: 0 0 8px 0;
+    color: #2d3748;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .card-description {
+    margin: 0 0 12px 0;
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    flex-grow: 1;
+  }
+  
+  .card-meta {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+    font-size: 0.8rem;
+    color: #718096;
+  }
+  
+  .progress-container {
+    margin-top: auto;
+    width: 100%;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background: #4a6bdf;
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
+    color: #718096;
+  }
+  
+  .card-footer {
+    padding: 12px 16px;
+    border-top: 1px solid #edf2f7;
+    background: #f8fafc;
+  }
+  
+  .card-button {
+    width: 100%;
+    padding: 8px 16px;
+    background: #4a6bdf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .card-button:hover {
+    background: #3b5bdb;
+  }
+  
+  .card-button.enrolled {
+    background: #38a169;
+  }
+  
+  .card-button.enrolled:hover {
+    background: #2f855a;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card-image-container {
+      height: 120px;
+    }
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    gap: 20px;
+    padding: 20px;
+  }
+
+/*# sourceMappingURL=components-Card-Card-stories.768f865a.chunk.css.map*/
