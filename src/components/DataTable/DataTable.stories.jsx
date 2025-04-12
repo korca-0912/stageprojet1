@@ -11,11 +11,11 @@ export default {
 };
 
 const courses = [
-  { id: 1, title: 'Introduction à React', instructeur: 'Mr diop', durée : '6h', terminé: true },
-  { id: 2, title: 'JavaScript Avancé', instructeur: 'Mr diop', durée : '8h', terminé: false },
-  { id: 3, title: 'CSS Moderne', instructeur: 'Mr diop', durée : '4h', terminé: true },
-  { id: 4, title: 'Node.js Fondamentaux', instructeur: 'Mr diop', durée : '10h', terminé: false },
-  { id: 5, title: 'Base de données SQL', instructeur: 'Mr diop', durée : '7h', terminé: false },
+  { id: 1, title: 'Introduction à React', instructeur: 'Mr diop', durée: '6h', terminé: true },
+  { id: 2, title: 'JavaScript Avancé', instructeur: 'Mr diop', durée: '8h', terminé: false },
+  { id: 3, title: 'CSS Moderne', instructeur: 'Mr diop', durée: '4h', terminé: true },
+  { id: 4, title: 'Node.js Fondamentaux', instructeur: 'Mr diop', durée: '10h', terminé: false },
+  { id: 5, title: 'Base de données SQL', instructeur: 'Mr diop', durée: '7h', terminé: false },
 ];
 
 const studentProgress = [
@@ -42,7 +42,7 @@ CourseList.args = {
     },
     { key: 'instructeur', header: 'Instructeur' },
     { 
-      key: 'duree', 
+      key: 'durée', 
       header: 'Durée',
       render: (value) => (
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -51,7 +51,7 @@ CourseList.args = {
       )
     },
     { 
-      key: 'complet', 
+      key: 'terminé', 
       header: 'Terminé',
       render: (value) => (
         value ? <FiCheckCircle color="#38a169" /> : 'En cours'
@@ -65,7 +65,7 @@ CourseList.args = {
 export const EtudiantProgression = Template.bind({});
 EtudiantProgression.args = {
   columns: [
-    { key: 'etudiant', header: 'Étudiant' },
+    { key: 'étudiant', header: 'Étudiant' },
     { 
       key: 'progression', 
       header: 'Progression',
@@ -87,9 +87,9 @@ EtudiantProgression.args = {
         </div>
       )
     },
-    { key: 'dernierAccess', header: 'Dernier accès' },
+    { key: 'dernieraccès', header: 'Dernier accès' },
   ],
-  data: EtudiantProgression,
+  data: studentProgress,  // Correction ici (remplacé EtudiantProgression par studentProgress)
   selectable: true,
   pageSize: 3,
 };
@@ -97,13 +97,13 @@ EtudiantProgression.args = {
 export const SortableTable = Template.bind({});
 SortableTable.args = {
   columns: [
-    { key: 'titre', header: 'Cours', sortable: true },
+    { key: 'title', header: 'Cours', sortable: true },
     { key: 'instructeur', header: 'Instructeur', sortable: true },
-    { key: 'duree', header: 'Durée', sortable: true },
+    { key: 'durée', header: 'Durée', sortable: true },
   ],
   data: [...courses, 
-    { id: 6, titre: 'Algorithmes', instructeur: 'Mr ba', duration: '12h' },
-    { id: 7, titre: 'UI/UX Design', instructeur: 'Mr sall', duration: '5h' },
+    { id: 6, title: 'Algorithmes', instructeur: 'Mr ba', durée: '12h' },
+    { id: 7, title: 'UI/UX Design', instructeur: 'Mr sall', durée: '5h' },
   ],
   sortable: true,
 };
@@ -111,7 +111,7 @@ SortableTable.args = {
 export const CompactTable = Template.bind({});
 CompactTable.args = {
   columns: [
-    { key: 'titre', header: 'Cours' },
+    { key: 'title', header: 'Cours' },
     { key: 'instructeur', header: 'Instructeur' },
   ],
   data: courses,
