@@ -11,19 +11,19 @@ export default {
 };
 
 const courses = [
-  { id: 1, title: 'Introduction à React', instructor: 'Jean Dupont', duration: '6h', completed: true },
-  { id: 2, title: 'JavaScript Avancé', instructor: 'Marie Martin', duration: '8h', completed: false },
-  { id: 3, title: 'CSS Moderne', instructor: 'Pierre Durand', duration: '4h', completed: true },
-  { id: 4, title: 'Node.js Fondamentaux', instructor: 'Sophie Lambert', duration: '10h', completed: false },
-  { id: 5, title: 'Base de données SQL', instructor: 'Thomas Leroy', duration: '7h', completed: false },
+  { id: 1, title: 'Introduction à React', instructeur: 'Mr diop', durée : '6h', terminé: true },
+  { id: 2, title: 'JavaScript Avancé', instructeur: 'Mr diop', durée : '8h', terminé: false },
+  { id: 3, title: 'CSS Moderne', instructeur: 'Mr diop', durée : '4h', terminé: true },
+  { id: 4, title: 'Node.js Fondamentaux', instructeur: 'Mr diop', durée : '10h', terminé: false },
+  { id: 5, title: 'Base de données SQL', instructeur: 'Mr diop', durée : '7h', terminé: false },
 ];
 
 const studentProgress = [
-  { id: 1, student: 'Alice Dupont', progress: 75, lastAccess: '2023-05-15' },
-  { id: 2, student: 'Bob Martin', progress: 42, lastAccess: '2023-05-10' },
-  { id: 3, student: 'Charlie Durand', progress: 90, lastAccess: '2023-05-18' },
-  { id: 4, student: 'Diana Lambert', progress: 100, lastAccess: '2023-05-20' },
-  { id: 5, student: 'Eve Leroy', progress: 30, lastAccess: '2023-05-05' },
+  { id: 1, étudiant: 'Alice Dupont', progression: 75, dernieraccès: '2023-05-15' },
+  { id: 2, étudiant: 'Bob Martin', progression: 42, dernieraccès: '2023-05-10' },
+  { id: 3, étudiant: 'Charlie Durand', progression: 90, dernieraccès: '2023-05-18' },
+  { id: 4, étudiant: 'Diana Lambert', progression: 100, dernieraccès: '2023-05-20' },
+  { id: 5, étudiant: 'Eve Leroy', progression: 30, dernieraccès: '2023-05-05' },
 ];
 
 const Template = (args) => <DataTable {...args} />;
@@ -40,9 +40,9 @@ CourseList.args = {
         </div>
       )
     },
-    { key: 'instructor', header: 'Instructeur' },
+    { key: 'instructeur', header: 'Instructeur' },
     { 
-      key: 'duration', 
+      key: 'duree', 
       header: 'Durée',
       render: (value) => (
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -51,7 +51,7 @@ CourseList.args = {
       )
     },
     { 
-      key: 'completed', 
+      key: 'complet', 
       header: 'Terminé',
       render: (value) => (
         value ? <FiCheckCircle color="#38a169" /> : 'En cours'
@@ -62,12 +62,12 @@ CourseList.args = {
   onRowClick: (row) => console.log('Cours sélectionné:', row.title),
 };
 
-export const StudentProgress = Template.bind({});
-StudentProgress.args = {
+export const EtudiantProgression = Template.bind({});
+EtudiantProgression.args = {
   columns: [
-    { key: 'student', header: 'Étudiant' },
+    { key: 'etudiant', header: 'Étudiant' },
     { 
-      key: 'progress', 
+      key: 'progression', 
       header: 'Progression',
       render: (value) => (
         <div style={{ 
@@ -87,9 +87,9 @@ StudentProgress.args = {
         </div>
       )
     },
-    { key: 'lastAccess', header: 'Dernier accès' },
+    { key: 'dernierAccess', header: 'Dernier accès' },
   ],
-  data: studentProgress,
+  data: EtudiantProgression,
   selectable: true,
   pageSize: 3,
 };
@@ -97,13 +97,13 @@ StudentProgress.args = {
 export const SortableTable = Template.bind({});
 SortableTable.args = {
   columns: [
-    { key: 'title', header: 'Cours', sortable: true },
-    { key: 'instructor', header: 'Instructeur', sortable: true },
-    { key: 'duration', header: 'Durée', sortable: true },
+    { key: 'titre', header: 'Cours', sortable: true },
+    { key: 'instructeur', header: 'Instructeur', sortable: true },
+    { key: 'duree', header: 'Durée', sortable: true },
   ],
   data: [...courses, 
-    { id: 6, title: 'Algorithmes', instructor: 'Paul Bernard', duration: '12h' },
-    { id: 7, title: 'UI/UX Design', instructor: 'Laura Petit', duration: '5h' },
+    { id: 6, titre: 'Algorithmes', instructeur: 'Mr ba', duration: '12h' },
+    { id: 7, titre: 'UI/UX Design', instructeur: 'Mr sall', duration: '5h' },
   ],
   sortable: true,
 };
@@ -111,8 +111,8 @@ SortableTable.args = {
 export const CompactTable = Template.bind({});
 CompactTable.args = {
   columns: [
-    { key: 'title', header: 'Cours' },
-    { key: 'instructor', header: 'Instructeur' },
+    { key: 'titre', header: 'Cours' },
+    { key: 'instructeur', header: 'Instructeur' },
   ],
   data: courses,
   pageSize: 5,

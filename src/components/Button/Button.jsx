@@ -32,7 +32,7 @@ export const Button = ({
   );
 };
 
-Button.propTypes = { /* ... (gardez la même configuration) ... */ };
+Button.propTypes = {};
 
 
 export default Button;

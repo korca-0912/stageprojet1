@@ -13,7 +13,7 @@ const Template = (args) => <Navbar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  logo: '', // Remplacez par le chemin de votre logo
+  logo: '', // Remplacez par le chemin de logo
   title: 'E-Learning Pro',
   menuItems: [
     { label: 'Cours', path: '/courses' },
