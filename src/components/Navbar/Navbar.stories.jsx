@@ -22,7 +22,7 @@ Default.args = {
     { label: 'Calendrier', path: '/calendar' },
   ],
   userProfile: {
-    name: 'Jean Dupont',
+    name: 'Mohamed fall',
     avatar: '', // Remplacez par le chemin de l'avatar
   },
 };
